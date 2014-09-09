@@ -10,6 +10,14 @@ namespace _1._1vaxelpengar
     {
         static void Main(string[] args)
         {
+            // declare varibel
+            uint total;
+            int amount;
+            double subTotal;
+
+            // user input
+            
+
         }
     }
 }
