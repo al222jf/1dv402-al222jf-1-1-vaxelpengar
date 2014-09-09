@@ -12,24 +12,78 @@ namespace _1._1vaxelpengar
         {
             // declare varibel
             double subTotal;
-            uint total;
+            uint total = 0;
             double roundingOffAmount;
             uint totalToPay;
             uint amountBack;
             
             // user input
-            Console.Write("Ange totalsumma      : ");
-            subTotal = double.Parse(Console.ReadLine());
+            while (true)
+            {
+                try
+                {
+                    Console.Write("Ange totalsumma      : ");
+                    subTotal = double.Parse(Console.ReadLine());
 
-            Console.Write("Ange erhållet belopp : ");
-            total = uint.Parse(Console.ReadLine());
+                    if (subTotal >= 0.49)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Totalsumman är för liten. Köpet kunde inte genomföras.");
+                        Console.ResetColor();
+                    }
+                }
+                catch
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.WriteLine("FEL! Erhållet belopp felaktigt.");
+                    Console.ResetColor();
+                }
+            }
 
             //rounding
             totalToPay = (uint)Math.Round(subTotal);
             roundingOffAmount = totalToPay - subTotal;
 
+            while (true)
+            {
+                try
+                {
+                    Console.Write("Ange erhållet belopp : ");
+                    total = uint.Parse(Console.ReadLine());
+
+                    if (totalToPay < total)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Erhållet belopp är för litet. Köpet kunde inte genomföras.");
+                        Console.ResetColor(); 
+                    }
+                }
+                catch
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Totalsumman är för liten. Köpet kunde inte genomföras.");
+                    Console.ResetColor();
+                }
+            }
+
+           
+            
+            
+
             //amount back
             amountBack = total - totalToPay;
+
+            //% operator
+
+
 
             //recipt
             Console.WriteLine();
@@ -40,6 +94,7 @@ namespace _1._1vaxelpengar
             Console.WriteLine("Att betala       :   {0:c0}", totalToPay);
             Console.WriteLine("Kontant          :   {0:c0}", total);
             Console.WriteLine("Tillbaka         :   {0:c0}", amountBack);
+            Console.WriteLine("---------------------------------");
 
 
         }
