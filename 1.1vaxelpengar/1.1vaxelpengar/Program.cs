@@ -11,12 +11,27 @@ namespace _1._1vaxelpengar
         static void Main(string[] args)
         {
             // declare varibel
-            uint total;
+            double total;
             int amount;
             double subTotal;
 
             // user input
-            
+            Console.Write("Ange totalsumma      : ");
+            total = double.Parse(Console.ReadLine());
+
+            Console.Write("Ange erhållet belopp : ");
+            amount = int.Parse(Console.ReadLine());
+
+            //rounding
+
+
+            //recipt
+            Console.WriteLine();
+            Console.WriteLine("KVITTO");
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine("Totalt       :   {0:c}", total);
+            Console.WriteLine("Öresavrundning   :   ", )
+
 
         }
     }

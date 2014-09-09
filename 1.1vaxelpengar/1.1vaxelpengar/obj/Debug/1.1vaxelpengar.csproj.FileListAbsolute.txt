@@ -1,1 +1,6 @@
 P:\Git\1dv402-al222jf-1-1-vaxelpengar\1.1vaxelpengar\1.1vaxelpengar\bin\Debug\1.1vaxelpengar.exe.config
+P:\Git\1dv402-al222jf-1-1-vaxelpengar\1.1vaxelpengar\1.1vaxelpengar\bin\Debug\1.1vaxelpengar.exe
+P:\Git\1dv402-al222jf-1-1-vaxelpengar\1.1vaxelpengar\1.1vaxelpengar\bin\Debug\1.1vaxelpengar.pdb
+P:\Git\1dv402-al222jf-1-1-vaxelpengar\1.1vaxelpengar\1.1vaxelpengar\obj\Debug\1.1vaxelpengar.csprojResolveAssemblyReference.cache
+P:\Git\1dv402-al222jf-1-1-vaxelpengar\1.1vaxelpengar\1.1vaxelpengar\obj\Debug\1.1vaxelpengar.exe
+P:\Git\1dv402-al222jf-1-1-vaxelpengar\1.1vaxelpengar\1.1vaxelpengar\obj\Debug\1.1vaxelpengar.pdb
