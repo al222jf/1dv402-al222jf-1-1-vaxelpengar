@@ -31,16 +31,22 @@ namespace _1._1vaxelpengar
                     }
                     else
                     {
+                        Console.WriteLine();
                         Console.BackgroundColor = ConsoleColor.Red;
                         Console.WriteLine("Totalsumman är för liten. Köpet kunde inte genomföras.");
                         Console.ResetColor();
+                        Console.WriteLine();
+                        Environment.Exit(0);
+                        
                     }
                 }
                 catch
                 {
+                    Console.WriteLine();
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.WriteLine("FEL! Erhållet belopp felaktigt.");
                     Console.ResetColor();
+                    Console.WriteLine();
                 }
             }
 
@@ -61,22 +67,23 @@ namespace _1._1vaxelpengar
                     }
                     else
                     {
+                        Console.WriteLine();
                         Console.BackgroundColor = ConsoleColor.Red;
                         Console.WriteLine("Erhållet belopp är för litet. Köpet kunde inte genomföras.");
-                        Console.ResetColor(); 
+                        Console.ResetColor();
+                        Console.WriteLine();
+                        Environment.Exit(0);
                     }
                 }
                 catch
                 {
+                    Console.WriteLine();
                     Console.BackgroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Totalsumman är för liten. Köpet kunde inte genomföras.");
+                    Console.WriteLine("FEL! Erhållet belopp felaktigt.");
                     Console.ResetColor();
+                    Console.WriteLine();
                 }
             }
-
-           
-            
-            
 
             //amount back
             amountBack = total - totalToPay;
