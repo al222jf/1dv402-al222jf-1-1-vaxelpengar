@@ -37,7 +37,6 @@ namespace _1._1vaxelpengar
                         Console.ResetColor();
                         Console.WriteLine();
                         Environment.Exit(0);
-                        
                     }
                 }
                 catch
@@ -88,35 +87,66 @@ namespace _1._1vaxelpengar
             //amount back
             amountBack = total - totalToPay;
 
-
-
             //recipt
             Console.WriteLine();
             Console.WriteLine("KVITTO");
             Console.WriteLine("---------------------------------");
-            Console.WriteLine("Totalt           :   {0:c}", subTotal);
-            Console.WriteLine("Öresavrundning   :   {0:c}", roundingOffAmount);
-            Console.WriteLine("Att betala       :   {0:c0}", totalToPay);
-            Console.WriteLine("Kontant          :   {0:c0}", total);
-            Console.WriteLine("Tillbaka         :   {0:c0}", amountBack);
+            Console.WriteLine("{0,-15}:{1,17:c}", "Totalt", subTotal);
+            Console.WriteLine("{0,-15}:{1,17:c}", "Öresavrundning", roundingOffAmount);
+            Console.WriteLine("{0,-15}:{1,17:c0}", "Att betala", totalToPay);
+            Console.WriteLine("{0,-15}:{1,17:c0}", "Kontant", total);
+            Console.WriteLine("{0,-15}:{1,17:c0}", "Tillbaka", amountBack);
             Console.WriteLine("---------------------------------");
-
 
             //% operator
             uint remaningAmount = amountBack / 500;
             if (remaningAmount > 0)
             {
-                Console.WriteLine("500-lappar {0}", remaningAmount);
+                Console.WriteLine(" {0,10}   :{1,2}","500-lappar", remaningAmount);
             }
 
             amountBack %= 500;
             remaningAmount = amountBack / 100;
             if (remaningAmount > 0)
             {
-                Console.WriteLine("100-lappar {0}", remaningAmount);
+                Console.WriteLine(" {0,10}   :{1,2}","100-lappar", remaningAmount);
             }
 
+            amountBack %= 100;
+            remaningAmount = amountBack / 50;
+            if (remaningAmount > 0)
+            {
+                Console.WriteLine(" {0,10}   :{1,2}", "50-lappar", remaningAmount);
+            }
 
+            amountBack %= 50;
+            remaningAmount = amountBack / 20;
+            if (remaningAmount > 0)
+            {
+                Console.WriteLine(" {0,10}   :{1,2}", "20-lappar", remaningAmount);
+            }
+
+            amountBack %= 20;
+            remaningAmount = amountBack / 10;
+            if (remaningAmount > 0)
+            {
+                Console.WriteLine(" {0,10}   :{1,2}", "10-kronor", remaningAmount);
+            }
+
+            amountBack %= 10;
+            remaningAmount = amountBack / 5;
+            if (remaningAmount > 0)
+            {
+                Console.WriteLine(" {0,10}   :{1,2}", "5-kronor", remaningAmount);
+            }
+
+            amountBack %= 5;
+            remaningAmount = amountBack / 1;
+            if (remaningAmount > 0)
+            {
+                Console.WriteLine(" {0,10}   :{1,2}", "1-kronor", remaningAmount);
+            }
+            Console.WriteLine();
         }
     }
 }
