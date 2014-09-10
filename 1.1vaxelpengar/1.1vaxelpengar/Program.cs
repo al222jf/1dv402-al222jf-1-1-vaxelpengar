@@ -25,7 +25,7 @@ namespace _1._1vaxelpengar
                     Console.Write("Ange totalsumma      : ");
                     subTotal = double.Parse(Console.ReadLine());
 
-                    if (subTotal >= 0.49)
+                    if (subTotal > 0.49)
                     {
                         break;
                     }
