@@ -11,8 +11,8 @@ namespace _1._1vaxelpengar
         static void Main(string[] args)
         {
             // declare varibel
-            double subTotal;
-            uint total = 0;
+            double subTotal=100;
+            uint total = 1000;
             double roundingOffAmount;
             uint totalToPay;
             uint amountBack;
@@ -88,8 +88,6 @@ namespace _1._1vaxelpengar
             //amount back
             amountBack = total - totalToPay;
 
-            //% operator
-
 
 
             //recipt
@@ -102,6 +100,21 @@ namespace _1._1vaxelpengar
             Console.WriteLine("Kontant          :   {0:c0}", total);
             Console.WriteLine("Tillbaka         :   {0:c0}", amountBack);
             Console.WriteLine("---------------------------------");
+
+
+            //% operator
+            uint remaningAmount = amountBack / 500;
+            if (remaningAmount > 0)
+            {
+                Console.WriteLine("500-lappar {0}", remaningAmount);
+            }
+
+            amountBack %= 500;
+            remaningAmount = amountBack / 100;
+            if (remaningAmount > 0)
+            {
+                Console.WriteLine("100-lappar {0}", remaningAmount);
+            }
 
 
         }
