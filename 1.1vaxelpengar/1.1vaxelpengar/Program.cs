@@ -11,8 +11,8 @@ namespace _1._1vaxelpengar
         static void Main(string[] args)
         {
             // declare varibel
-            double subTotal=100;
-            uint total = 1000;
+            double subTotal;
+            uint total;
             double roundingOffAmount;
             uint totalToPay;
             uint amountBack;
@@ -36,7 +36,7 @@ namespace _1._1vaxelpengar
                         Console.WriteLine("Totalsumman är för liten. Köpet kunde inte genomföras.");
                         Console.ResetColor();
                         Console.WriteLine();
-                        Environment.Exit(0);
+                        return;
                     }
                 }
                 catch
@@ -71,7 +71,7 @@ namespace _1._1vaxelpengar
                         Console.WriteLine("Erhållet belopp är för litet. Köpet kunde inte genomföras.");
                         Console.ResetColor();
                         Console.WriteLine();
-                        Environment.Exit(0);
+                        return;
                     }
                 }
                 catch
